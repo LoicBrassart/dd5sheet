@@ -2,63 +2,6 @@ import StatBlock from "@/components/Stat";
 import s from "../styles/Sheet.module.css";
 import { Character } from "@/entities/Character";
 
-type Skill =
-  | "Athletics"
-  | "Acrobatics"
-  | "Sleight of Hands"
-  | "Stealth"
-  | "Arcana"
-  | "History"
-  | "Investigation"
-  | "Nature"
-  | "Religion"
-  | "Animal Handling"
-  | "Insight"
-  | "Medicine"
-  | "Perception"
-  | "Survival"
-  | "Deception"
-  | "Intimidation"
-  | "Performance"
-  | "Persuasion";
-
-type Stat = {
-  label: string;
-  skills: Skill[];
-};
-const stats: Stat[] = [
-  {
-    label: "Strength",
-    skills: ["Athletics"],
-  },
-  {
-    label: "Dexterity",
-    skills: ["Acrobatics", "Sleight of Hands", "Stealth"],
-  },
-  {
-    label: "Constitution",
-    skills: [],
-  },
-  {
-    label: "Intelligence",
-    skills: ["Arcana", "History", "Investigation", "Nature", "Religion"],
-  },
-  {
-    label: "Wisdom",
-    skills: [
-      "Animal Handling",
-      "Insight",
-      "Medicine",
-      "Perception",
-      "Survival",
-    ],
-  },
-  {
-    label: "Charisma",
-    skills: ["Deception", "Intimidation", "Performance", "Persuasion"],
-  },
-];
-
 const loic = new Character("Loic");
 
 export default function Home() {
@@ -78,9 +21,8 @@ export default function Home() {
         <p>Inspiration</p>
         <p>Passive Wisdom (Perception)</p>
         <ul>
-          {stats.map((stat) => {
+          {DD5.stats.map((stat) => {
             const [base, mod] = loic.getScore(stat.label);
-
             return (
               <StatBlock
                 key={stat.label}
@@ -97,7 +39,7 @@ export default function Home() {
       <section className={s.Misc}>
         <p>Armor Class</p>
         <p>Initiative</p>
-        <p>Speex</p>
+        <p>Speed</p>
         <p>Hit Points</p>
         <p>Temporary Hit Points</p>
         <p>Hit Dice</p>
