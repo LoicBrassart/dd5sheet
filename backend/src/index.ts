@@ -1,11 +1,11 @@
-import express from "express"
+import express from "express";
 
-const app=express();
+const app = express();
 
-app.get("/", (req, res)=>{
-    res.send("W00t!")
-})
+app.get("/", (req, res) => {
+  res.send("W00t!");
+});
 
-app.listen(5000, ()=>{
-    console.log("App listening on http://localhost:5000")
-})
+app.listen(5000, () => {
+  console.log("App listening on http://localhost:5000");
+});

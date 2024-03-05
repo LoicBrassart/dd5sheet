@@ -1,0 +1,44 @@
+.sheet {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Head Head Head"
+    "Stats Misc Personnality"
+    "Stats Attacks Features"
+    "Proficiencies Equipment Equipment";
+}
+
+.Head {
+  grid-area: Head;
+}
+
+.Stats {
+  grid-area: Stats;
+}
+
+.Proficiencies {
+  grid-area: Proficiencies;
+}
+
+.Misc {
+  grid-area: Misc;
+}
+
+.Attacks {
+  grid-area: Attacks;
+}
+
+.Equipment {
+  grid-area: Equipment;
+}
+
+.Personnality {
+  grid-area: Personnality;
+}
+
+.Features {
+  grid-area: Features;
+}
