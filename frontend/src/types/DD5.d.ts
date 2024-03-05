@@ -1,6 +1,6 @@
 declare global {
   namespace DD5 {
-  // PAS de const, class
+    // PAS de const, class
 
     type Skill =
       | "Athletics"
@@ -28,4 +28,4 @@ declare global {
     };
   }
 }
-export {}
+export {};

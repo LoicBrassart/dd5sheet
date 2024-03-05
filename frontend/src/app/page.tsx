@@ -1,7 +1,7 @@
 import Stat from "@/components/Stat";
 import s from "../styles/Sheet.module.css";
 import { Character } from "@/entities/Character";
-import {stats} from "@/rules";
+import { stats } from "@/rules";
 
 const loic = new Character("Loic");
 
