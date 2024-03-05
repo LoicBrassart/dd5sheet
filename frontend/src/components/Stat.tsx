@@ -1,6 +1,6 @@
 type Stat = {
   label: string;
-  skills: Skill[];
+  skills: DD5.Skill[];
 };
 type Props = {
   stat: Stat;

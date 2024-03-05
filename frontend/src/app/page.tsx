@@ -1,6 +1,7 @@
-import StatBlock from "@/components/Stat";
+import Stat from "@/components/Stat";
 import s from "../styles/Sheet.module.css";
 import { Character } from "@/entities/Character";
+import {stats} from "@/rules";
 
 const loic = new Character("Loic");
 
@@ -21,10 +22,10 @@ export default function Home() {
         <p>Inspiration</p>
         <p>Passive Wisdom (Perception)</p>
         <ul>
-          {DD5.stats.map((stat) => {
+          {stats.map((stat) => {
             const [base, mod] = loic.getScore(stat.label);
             return (
-              <StatBlock
+              <Stat
                 key={stat.label}
                 stat={stat}
                 score={base}
