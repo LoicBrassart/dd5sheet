@@ -5,17 +5,17 @@ type Props = {
 };
 export default function Input({ type, label, value }: Props) {
   return (
-    <div className="relative m-4">
+    <div className="relative my-4">
       <input
         type={type}
         name={label}
         placeholder={label}
         value={value}
-        className="peer bg-transparent h-8 w-16 border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-rose-600"
+        className="peer bg-transparent h-8 w-16 border-b-2 border-gray-300 text-gray-300 placeholder-transparent focus:outline-none focus:border-rose-600 transition-all"
       />
       <label
         htmlFor={label}
-        className="absolute left-0.5 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+        className="absolute left-0.5 -top-3.5 text-gray-300 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-sm"
       >
         {label}
       </label>

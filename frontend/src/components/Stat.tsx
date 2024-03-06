@@ -12,16 +12,18 @@ type Props = {
 };
 export default function Stat({ stat, score, mod, trainings }: Props) {
   return (
-    <li>
-      <p>{stat.label}</p>
-      <Input label={stat.label} type="number" value={score} />
-      <p>{mod}</p>
+    <li className="border-2 flex *:m-4">
+      <div>
+        <Input label={stat.label} type="number" value={score} />
+        <p>{mod}</p>
+      </div>
       <ul>
         <li>
           <input
             type="checkbox"
             disabled
             checked={trainings.includes(stat.label)}
+            className="mr-2"
           />
           {stat.label} saving throws
         </li>
@@ -31,6 +33,7 @@ export default function Stat({ stat, score, mod, trainings }: Props) {
               type="checkbox"
               disabled
               checked={trainings.includes(skill)}
+              className="mr-2"
             />
             {skill}
           </li>
