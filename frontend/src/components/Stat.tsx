@@ -1,3 +1,5 @@
+import Input from "./atoms/Input";
+
 type Stat = {
   label: string;
   skills: DD5.Skill[];
@@ -12,7 +14,7 @@ export default function Stat({ stat, score, mod, trainings }: Props) {
   return (
     <li>
       <p>{stat.label}</p>
-      <p>{score}</p>
+      <Input label={stat.label} type="number" value={score} />
       <p>{mod}</p>
       <ul>
         <li>
