@@ -1,20 +1,14 @@
 import Stat from "@/components/Stat";
-import s from "../styles/Sheet.module.css";
 import { Character } from "@/entities/Character";
 import { stats } from "@/rules";
-import Input from "@/components/atoms/Input";
 
 const loic = new Character("Loic");
 
 export default function Home() {
   return (
     <>
-      <aside className="border-4 border-red-800 absolute top-0 right-0 w-60">
-        SandBox:
-        <Input label="test01" type="text" value="Toto" />
-      </aside>
-      <main className={s.sheet}>
-        <section className={s.Head}>
+      <main className="grid grid-cols-3 grid-rows-4 gap-2 [&>*]:border-red-50 [&>*]:border-2">
+        <section className="col-span-3">
           <p>Name: {loic.name}</p>
           <p>Class & Level</p>
           <p>Race</p>
@@ -23,7 +17,7 @@ export default function Home() {
           <p>Player Name</p>
           <p>Experience points</p>
         </section>
-        <section className={s.Stats}>
+        <section className="row-span-2 row-start-2">
           <p>Proficiency Bonus</p>
           <p>Inspiration</p>
           <p>Passive Wisdom (Perception)</p>
@@ -42,25 +36,29 @@ export default function Home() {
             })}
           </ul>
         </section>
-        <section className={s.Attacks}></section>
-        <section className={s.Misc}>
-          <p>Armor Class</p>
-          <p>Initiative</p>
-          <p>Speed</p>
+        <section className="col-start-2 row-start-3"></section>
+        <section className="row-start-2 flex flex-col [&>*]:flex [&>*]:justify-evenly">
+          <div>
+            <p>Armor Class</p>
+            <p>Initiative</p>
+            <p>Speed</p>
+          </div>
           <p>Hit Points</p>
           <p>Temporary Hit Points</p>
-          <p>Hit Dice</p>
-          <p>Death Saves</p>
+          <div>
+            <p>Hit Dice</p>
+            <p>Death Saves</p>
+          </div>
         </section>
-        <section className={s.Features}></section>
-        <section className={s.Personnality}>
+        <section className="col-start-3 row-start-3"></section>
+        <section className="row-start-2">
           <p>Traits</p>
           <p>Ideals</p>
           <p>Bonds</p>
           <p>Flaws</p>
         </section>
-        <section className={s.Proficiencies}></section>
-        <section className={s.Equipment}></section>
+        <section className="row-start-4"></section>
+        <section className="col-span-2 row-start-4"></section>
       </main>
     </>
   );
